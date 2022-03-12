@@ -1,3 +1,4 @@
+from datetime import date, time, datetime
 # A simple generator function
 def my_gen():
     n = 1
@@ -6,7 +7,7 @@ def my_gen():
     yield n
 
     n += 1
-    print('This is printed second')
+    doit()
     yield n
 
     n += 1
@@ -14,13 +15,20 @@ def my_gen():
     yield n
 
     n += 2
-    print('This is printed at after the last')
+    print('This is printed after the last')
     yield n
+
+
+def doit():
+    print('This is printed second')
+    print(date.today())
+    current_time = datetime.today().strftime("%H:%M:%S")
+    print(current_time)
 
 
 a = my_gen()
 
-next(a)
-next(a)
-next(a)
-next(a)
+next(a);
+next(a);
+next(a);
+next(a);
