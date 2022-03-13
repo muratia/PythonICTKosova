@@ -1,0 +1,28 @@
+<html>
+<!-- This is the template file. Any code written here will automatically be carried onto the files that extend from this file(eg: home.html, account.html) -->
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Python Website Demo</title>
+</head>
+
+<body>
+    <div>
+        <center>
+            <h1 style="font-family:verdana;">Simple Python Website Demo</h1>
+
+        </center>
+
+    </div>
+    <div>
+        <center>
+            {% block body %} {% endblock %}
+
+<br>
+<br>
+
+<a href="javascript:history.back()">Go Back</a>
+        </center>
+    </div>
+</body>
+
+</html>
