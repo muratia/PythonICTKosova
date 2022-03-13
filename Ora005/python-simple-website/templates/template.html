@@ -1,10 +1,26 @@
 <html>
-<!-- This is the template file. Any code written here will automatically be carried onto the files that extend from this file(eg: home.html, account.html) -->
+<!-- This is the template file. Any code written here will automatically be carried onto the files that extend from this file(eg: home.html, about.html) -->
 <head>
-    <link rel="stylesheet" href="../static/style.css">
-    <title>Python Website Demo</title>
+   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+ <script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <title>Website</title>
+     <meta charset="UTF-8">
 </head>
-
+  <header>
+      <div class="container">
+        <h1 class="logo">Ahmet's web app</h1>
+        <strong><nav>
+          <ul class="menu">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('profile') }}">Profile</a></li>
+              <li><a href="{{ url_for('about') }}">About</a></li>
+               <li><a href="{{ url_for('account') }}">Account</a></li>
+               <li><a href="{{ url_for('login') }}">Login</a></li>
+               <li><a href="{{ url_for('register') }}">Register</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
 <body>
     <div>
         <center>

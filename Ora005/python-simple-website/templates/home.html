@@ -1,22 +1,43 @@
 {% extends "template.html" %} {% block body %}
 
 <h2>Home Page</h2>
-<p>This is the home page!</p>
+ <table class="homeTable">
+     <thead>
+     <tr> <th>Më të rejat </th><th>{% if username is defined %}
+  Hello {{ username[2] }} {{ username[3] }}
+{% else %}
+    variable is not defined
+{% endif %} </th></tr>
+     </thead>
+
+ </table>
+
+<div class="entry-content">
+		<div class="clearfix">
+<div>
+<h2 class="_5clb">Ti dhe Orkestrimi magjik</h2>
+</div>
+</div>
+<div class="mts _50f8">
+<p>July 23, 2010 at 2:51am</p>
+<div id="u_fetchstream_36_2" class="_6a _43_1 _21p0 _fol">&nbsp;</div>
+</div>
+<div class="_5k3v _5k3w clearfix">
+<div>
+<p><em>Ishim te rinj takoheshim rishtazi çdo dite, rrugët tona sikur ishin te ndërlidhura pothuaj në çdo orë të njëjte te ditëve të ndryshme. Kërcitjet e karrocave nëpër rrugët tona, tingëllonin këndshëm sikur te ishin tingëllimet e orës se sahatkullës. Tutje gjendej lumi, që me gurgullimat e tij të ndërthurur aty këtu me cicërimat e zogjve përreth artikulonte një orkestrim magjik që e ndiqja me padurim çdo ditë. I mbushur me emocione kthehesha te muzgu na ngatërrohej nëpër këmbe e rrugës për në shtëpinë time të takoja por siç ishim të rinj vjedhurazi ia hidhnim ndonjë shikim por fjalët sikur i kishim të mbyllura me dry, nuk shkëmbenim asnjë fjalë. Një dite tek po dëgjoja orkestrimin magjik, ashtu papritur u fut një gjë, e tmerrshme ishte, një bubullimë gjëmoi, zogjtë i tmerroi, cicërimat e tyre u ç’akorduan. Befas ca pika ranë, pas tyre edhe një mori pikash tjera pasuan. Lumit gurgullimat sa vijnë e i shtohen e përforcohen, sa që kërcitjet e karrocave filluan të zhyteshin në ujërat e lumit që tanimë kishte dalë nga shtrati i tij të gërryer me kalimin e kohës. Papritmas një urë që ishte tutje e vendosur u plandos në ujërat e turbulluara sa që copë dërrasash, trarët u tretën për pak në ujërat e turbulluara. Sa u panë atje dërrasat, uji i barti vrullshëm në drejtimin të rrugës sonë. Në ato çaste karroca jote kalonte aty pranë dhe një dërrasë e zuri rrotën nga ana e ujërave të furishme dhe e e theu atë. Në atë çast karroca filloi të gravitonte në drejtim të lumit, lum që kishte humbur shtratin e vet e sorollatej sa këtej e sa andej. Në atë moment zgjata dorën dhe e kapa karrocën nga ana tjetër dhe e lidha me litar që mos të rrëshqiste tutje. Shiu nuk ndalej dot, pikat e tij ishin bërë sikur të ishin të ngjitura njëra pas tjetrës por mua nuk më frikësuan të ndihmova të dilje nga karroca për tu ngjitur në vende ku uji nuk arrinte.</em></p>
+<p><em>Sot, kishin kaluar shumë ditë, javë e vite dhe unë rrija për ca kohë përsëri në të njëjtin vend duke soditur dhe kujtuar ato çaste kur karroca ishte në rrezik të përmbytej. Nuk e harroj edhe gëzimin tënd që pate kur dole nga karroca që ishte gjysmë e përmbytur. Por sot ishte më ndryshe se t’i erdhe pranë dhe më tërhoqe nga kujtimi im që e kisha mbajtur për shumë vite. Sot, të shoh të gëzuar që përsëri gjetëm njëri-tjetrin por kësaj here ti më tërhoqe.</em></p>
+</div>
+</div>
 
 
-<form action="/account" method="POST">
-    <input type="text" name="name" id="name" placeholder="Your Name" class="form-feild"><br>
-    <button type="submit" class="add-btn">See Account Page</button>
-</form>
-<br>
+<h3 id="you-and-the-magical-orchestration">You and the magical orchestration</h3>
 
-<form action="/profile" method="POST">
-    <input type="text" name="name" id="name" placeholder="Your Name" class="form-field"><br>
-    <button type="submit" class="add-btn">See Profile Page</button>
-</form>
-<form action="/upload" method="POST">
-    <input type="text" name="name" id="name" placeholder="Your Name" class="form-field"><br>
-    <button type="submit" class="add-btn">See Profile Page</button>
-</form>
-<p>Note how this page can be accesed on both '/' and '/home'. Look into app.py for more information</p>
+
+
+<p><em>We were young we met again every day, our roads as if they were interconnected almost every same hour of different days. The crackling of carts through our streets sounded like clockwork. Further away was the river, which with its ripples intertwined here and there with the chirping of the birds around articulated a magical orchestration that I eagerly followed every day. Filled with emotions, I would return at dusk, we would be confused at the foot of the road to my house to meet, but as we were young we would sneak a glance at each other but the words as if we had them locked, we did not exchange any words. One day while I was listening to the magic orchestration, something suddenly came in, it was horrible, a thunder roared, the birds were terrified, their chirps were disharmonious. Suddenly some points fell, after them a host of other points followed. The gurgling of the river increased and intensified, so much so that the crack of the carts began to sink into the waters of the river that had already come out of its eroded bed over time. Suddenly a bridge that was further up was laid in the turbulent waters so much that pieces of planks, the beams melted a little in the turbulent waters. As soon as the planks were seen there, the water carried them rapidly in the direction of our path. In those moments your chariot passed by and a plank grabbed the wheel by the raging waters and broke it. At that moment the chariot began to gravitate towards the river, the river that had lost its bed and wandered here and there. At that moment I extended my hand and grabbed the cart on the other side and tied it with rope so that it would not slip further. The rain could not stop, its drops were made as if they were stuck one after the other but I was not afraid to help get out of the cart to climb to places where water could not reach.</em></p>
+
+
+
+<p>T<em>oday, many days, weeks, and years had passed, and I was staying in the same place for a while, contemplating and remembering those moments when the cart was in danger of</em> <em>flooding. I do not forget the joy you had when you got out of the cart that was half flooded. But today was different than coming close to each other and pulling me away from my memory that I had held for so many years. Today, I see you happy that we found each other again but this time you attracted me.</em></p>
+			 
 {% endblock %}

@@ -1,0 +1,37 @@
+{% extends "template.html" %} {% block body %}
+
+<h2>Log in Page</h2>
+<p>This is the account page!</p>
+
+<br>
+<h3>Welcome </h3>
+<p>
+<form action="/login" method="post" enctype="utf-8">
+    <table>
+
+        <tbody>
+        <tr>
+            <th> User name:</th>
+            <td><input type="text" name="username" placeholder="User name"/></td>
+        </tr>
+        <tr>
+            <th> Password:</th>
+            <td><input type="password" name="pwd" placeholder="Password"/></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2">
+
+                <input type="reset" value="Cancel" class="cancel-btn">
+                <input type="submit" value="Submit" class="add-btn"/>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+
+</form>
+</p>
+<br>
+
+{% endblock %}

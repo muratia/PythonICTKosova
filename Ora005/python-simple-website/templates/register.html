@@ -1,0 +1,57 @@
+{% extends "template.html" %} {% block body %}
+
+<h2>Register Page</h2>
+<p>This is the register page!</p>
+
+<br>
+<h3>Welcome</h3>
+<p>
+<form action="/register" method="post" enctype="utf-8" onsubmit="checkPwds()">
+    <table>
+
+        <tbody>
+        <tr>
+            <th> User name</th>
+            <td><input type="text" name="username" placeholder="User name"/></td>
+        </tr>
+        <tr>
+            <th>First Name</th>
+            <td><input type="text" name="firstName" placeholder="First name"/></td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td><input type="text" name="lastName" placeholder="Last name"/></td>
+        </tr>
+        <tr>
+            <th>E-mail</th>
+            <td><input type="email" name="email" placeholder="E-mail"/></td>
+        </tr>
+        <tr>
+            <th>Password</th>
+            <td><input type="password" name="pwd" id="pwd" placeholder="Password"/></td>
+        </tr>
+        <tr>
+            <th>Repeat Password</th>
+            <td><input type="password" name="pwd1" id="pdw1" placeholder="Password"/></td>
+        </tr>
+        <tr>
+            <th>Phone</th>
+            <td><input type="text" name="phone" placeholder="Phone"/></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2">
+
+                <input type="reset" value="Cancel" class="cancel-btn">
+                <input type="submit" value="Submit" class="add-btn"/>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+
+</form>
+</p>
+<br>
+
+{% endblock %}

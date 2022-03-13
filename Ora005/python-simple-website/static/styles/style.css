@@ -19,6 +19,25 @@ body {
     color: #d5e0e7;
 }
 
+.cancel-btn{
+    height: 40px;
+    width: 150px;
+    color: #FFFFFF;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+.homeTable{
+    width:80% !important;
+}
+.cancel-btn:hover {
+    color: #003402f;
+    background-color: #E61E1E;
+    border: 1px solid #029902;
+    border-radius: 5px;
+}
 .add-btn {
     height: 40px;
     width: 150px;
@@ -44,7 +63,7 @@ body {
     border-radius: 5px;
 }
 
-.form-feild {
+.form-field {
     height: 40px;
     width: 200px;
     border: 1px solid #99AAB5;
@@ -53,4 +72,21 @@ body {
     margin: 10px;
     background-color: #2C2F33;
 }
+
+nav ul li, a {
+  display: inline;
+
+}
+nav   a {
+
+  padding: 8px;
+  background-color: #dddddd;
+  }
+
+ img {
+ float:left;
+
+ height:420px;
+ }
+
 
