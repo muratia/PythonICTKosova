@@ -3,14 +3,15 @@
 <h2>Home Page</h2>
  <table class="homeTable">
      <thead>
-     <tr> <th>Më të rejat </th><th>{% if username is defined %}
-  Hello {{ username[2] }} {{ username[3] }}
+     <tr> <th>Më të rejat </th><th>{% if user is defined %}
+  Hello {{ user[2] }} {{ user[3] }}
 {% else %}
-    variable is not defined
+
 {% endif %} </th></tr>
      </thead>
 
  </table>
+{% if  user is defined %}
 
 <div class="entry-content">
 		<div class="clearfix">
@@ -39,5 +40,5 @@
 
 
 <p>T<em>oday, many days, weeks, and years had passed, and I was staying in the same place for a while, contemplating and remembering those moments when the cart was in danger of</em> <em>flooding. I do not forget the joy you had when you got out of the cart that was half flooded. But today was different than coming close to each other and pulling me away from my memory that I had held for so many years. Today, I see you happy that we found each other again but this time you attracted me.</em></p>
-			 
+{% endif %}
 {% endblock %}

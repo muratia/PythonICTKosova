@@ -4,7 +4,7 @@ import mysql.connector as mariadb
 
 
 # Klasa Person
-class Person():
+class Person:
     cursor = 0;  # ndryshore globale kursori i bazës së të dhënave
     sleeping = 0;  # ndryshore globale ndryshore e cila e ruan gjendjen e fjetur
 
@@ -56,7 +56,7 @@ class Person():
         return;
 
     def sleep(self):  # metodë për të nisur fjetjen
-        if (self.sleeping == 0):  # kontrollon nëse personi është i zgjuar
+        if self.sleeping == 0:  # kontrollon nëse personi është i zgjuar
             print("Person " + self.employeeName + " is sleeping");
             self.sleeping = 1;  # e vë gjendjen 1 te self.sleeping që do të thotë personi është duke fjetur
         else:  # përndryshe
@@ -82,7 +82,20 @@ class Person():
             print("Person " + self.employeeName + " is running");
         else:  # përndryshe
             print("Person " + self.employeeName + " can't run he is sleeping");
-        return;
+        return
+
+    def load(self):
+        try:  # provon ta ekzekutojë strukturën
+
+            self.cursor.execute("SELECT * FROM employee;")
+            data = self.cursor.fetchall()
+            print("Data are loaded perfectly.");
+        except ValueError:
+            self.mariadb_connection.rollback();  # nëse ka ndodhur ndonjë problem transaksioni dështon
+            print("Data are not loaded.")
+        return data
+
+
 
 
 # inicializimi i ndryshores p me instancën e klasës Person
@@ -96,3 +109,7 @@ p.wakeup();
 p.walk();
 p.run();
 p.insert();
+
+data = p.load()
+
+print(data)

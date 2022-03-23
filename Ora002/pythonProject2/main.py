@@ -12,9 +12,11 @@ def print_hi(name):
         "Tregu", "Qendra", "Qendra"
     ]
     bashkesia = {"Tregu", "Qendra", "Qendra"}
-
+    tapple = ("Tupple")
     print(vargu)
     print(bashkesia)
+    print(tapple)
+
 
 def readAFile():
     # Open a file
@@ -27,12 +29,13 @@ def readAFile():
     # Close opened file
     fo.close()
 
+
 def writeToFile():
     # Open a file
     fo = open("foo2.txt", "w")
     fo.write("Python is a great language.\nYeah its great!!\n")
 
-    # Close opend file
+    # Close opened file
     fo.close()
 
 

@@ -4,14 +4,39 @@
 <p>This is the profile page!</p>
 
 <br>
-<h3>Welcome {{username}}</h3>
-<p>Here is your profile</p>
+<h3>Welcome {{user[2]}}</h3>
+<div id="postsContainer">
+    <table>
+        <tbody>
 
-{%for i in range(1, PhotosCount)%}
-    <img src="{{Photos[i][0]}}" alt="{{Photos[i][1]}}" title="{{Photos[i][2]}}" style="width:400px"/>
-{%endfor%}
-<br>
-<br>
-<a href="./upload">Upload a new photo</a>
 
+        {%for k in range(1, PostCount)%}
+        {{Posts[k].image}}
+        <tr>
+            <td>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{Posts[k][4]}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{Posts[k][1]}}</h5>
+                    <p class="card-text">{{Posts[k][2]|safe}}</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+            </td>
+        </tr>
+        {%endfor%}
+        </tbody>
+        <tfoot>
+        <tr>
+            <td>
+
+                <a href="./post-add" class="add-btn">Add a new post</a> <a href="./upload" class="add-btn">Upload a new
+                photo</a>
+            </td>
+        </tr>
+        </tfoot>
+
+    </table>
+</div>
 {% endblock %}

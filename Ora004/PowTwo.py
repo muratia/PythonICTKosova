@@ -13,6 +13,7 @@ class PowTwo:
         result = 2 ** self.n
         self.n += 1
         return result
- 
-a=  PowTwo(3);
+
+
+a = PowTwo(3);
 print(a)

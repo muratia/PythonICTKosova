@@ -30,7 +30,7 @@ for i in range(len(genre)):
     print("I like", genre[i])
 
 # program to display student's marks from record
-student_name = 'James'
+student_name = 'Jules'
 
 marks = {'James': 90, 'Jules': 55, 'Arthur': 77}
 

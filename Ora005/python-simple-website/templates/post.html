@@ -1,0 +1,66 @@
+{% extends "template.html" %} {% block body %}
+
+<script type="text/javascript">
+jQuery(document).ready(function(){
+  jQuery.noConflict();
+    jQuery("select.PostTitles").change(function(){
+        var selectedPost = $(this).children("option:selected").val();
+        alert("You have selected the post - " + selectedPost);
+    });
+});
+</script>
+<h2>My postings</h2>
+<p>Her you can see your postings!</p>
+
+<br>
+<h3>Welcome {{user[2]}}</h3>
+<p> Here are the posts</p>
+<br>
+<div id="postsContainer">
+    <table id="tblMainPostStructure">
+         <thead>
+                    <tr><th colspan="2">Posts</th></tr>
+                    </thead>
+        <tbody>
+        <tr>
+            <td>
+                <table>
+
+                    <tbody>
+                    <tr>
+                        <td>
+                        <select id="PostsTitles" size="8" onchange="return selectItem()">
+                             {% for item in Posts %}
+                            <option id="{{item[0]}}" value="{{item[0]}}" >{{item[1]}}</option>
+                             {%endfor%}
+                        </select>
+                        </td>
+                        <td id="postDisplay">
+
+
+
+
+
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td>
+                            <div id="postActions">
+                                <a href="./post-add" class="add-btn">Add a new post</a>
+                            </div>
+
+                        </td>
+                    </tr>
+                    </tfoot>
+
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock %}

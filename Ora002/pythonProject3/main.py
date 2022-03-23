@@ -9,8 +9,24 @@ def print_hi(name):
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 
+def http_error(status):
+    match status:
+        case 200:
+            return "OK"
+        case 400:
+            return "Bad request"
+        case 404:
+            return "Not found"
+        case 418:
+            return "I'm a teapot"
+        case _:
+            return "Something's wrong with the internet"
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
+    httpErrorCode = http_error(200)
+    print(httpErrorCode)
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

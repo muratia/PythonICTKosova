@@ -1,6 +1,12 @@
 
 /* Css files (Like this one) are where all the designing of the website is kept. */
-
+/* Enable darkmode in a Bootstrap Page */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--bs-dark);
+        color: var(--bs-light);
+    }
+}
 h1,
 h2,
 h3,
@@ -29,15 +35,17 @@ body {
     padding: 10px;
     margin: 10px;
 }
-.homeTable{
-    width:80% !important;
-}
+
 .cancel-btn:hover {
     color: #003402f;
     background-color: #E61E1E;
     border: 1px solid #029902;
     border-radius: 5px;
 }
+.homeTable{
+    width:80% !important;
+}
+
 .add-btn {
     height: 40px;
     width: 150px;
@@ -63,6 +71,8 @@ body {
     border-radius: 5px;
 }
 
+
+
 .form-field {
     height: 40px;
     width: 200px;
@@ -83,10 +93,192 @@ nav   a {
   background-color: #dddddd;
   }
 
- img {
+ .profileimg {
  float:left;
 
  height:420px;
  }
 
+ .post-title {
+  width:400px;
+  display:inline-block;
+  overflow: auto;
+  white-space: nowrap;
+  margin:0px auto;
+  border:1px red solid;
+ }
 
+ .post-body{
+    width: 400px;
+    height: 247px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: pre-wrap;
+    margin: 0px auto;
+    border: 1px red solid;
+
+ }
+
+ /* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+div#rightMenu{
+float:right;
+top: 0;
+}
+
+div#rightMenu ul li {
+    display: inline;
+  top: 0;
+  right: 25px;
+  font-size: 26px;
+  margin-left: 50px;
+   display: inline;
+}
+div#rightMenu ul li a img{
+width: 44px !important;
+background-repeat: no-repeat;
+}
+
+table#topHeader{
+width:100%
+}
+
+.card-img-top{
+width:380px
+}
+
+div#postsContainer{
+ margin: 20px;
+
+}
+
+div#postsContainer table tfoot tr td div {
+    margin-top: 30px;
+}
+
+table#tblMainPostStructure, table#tblMainPostStructure thead tr th {
+    padding:30px;
+    margin: 10px 0;
+    width:80%
+}
+
+.menu {
+background-image: url("../../static/resources/playlist.png");
+background-repeat: none;
+
+}
+
+.menu img{
+height: 43px;
+}
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+table#tblMainAddPostStructure{
+height:700px;
+}
+
+tfoot{
+ height:60px;
+ margin: 10px 0;
+
+}
+
+.ck-editor__editable {min-height: 500px;}

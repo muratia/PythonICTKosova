@@ -1,0 +1,50 @@
+{% extends "template.html" %}
+{% block body %}
+<form action="./addapost" method="post" enctype="multipart/form-data" onsubmit="return addPost()">
+    <fieldset>
+        <table id="tblMainAddPostStructure">
+            <thead>
+            <tr>
+                <th colspan="2">Postimet</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Titulli:</td>
+                <td>
+                    <input type="text" name="title" id="title" class="post-title" placeholder="Titulli"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Përmbatja:</td>
+                <td>
+                    <textarea id="editor" name="body"> </textarea>
+
+
+                    <script>
+
+ jQuery(document).ready(function() {
+  CKEDITOR.replace("editor")
+ });
+
+
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="file" name="file" placeholder="Image"/></td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="2">
+                    <div>
+                        <button type="submit" class="add-btn" style="float:right">Submit</button>
+                    </div>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+    </fieldset>
+</form>
+{% endblock %}
